@@ -1,13 +1,13 @@
 /* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
 
   .container {
-    max-width: 400px;
-    margin-top: 100px;
+    max-width: 300px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 15px;
     background-color: #f9f9f9;
   }
   
@@ -48,6 +48,9 @@
     text-align: center;
   }
   
+  .search{
+    margin: 30px;
+  }
   
   .btn {
     padding: 10px 20px;
@@ -55,7 +58,7 @@
     text-align: center;
     text-decoration: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     background-color: #007bff;
     color: #fff;
@@ -65,4 +68,31 @@
     background-color: #0056b3;
   }
   
+  .search-bar-container {
+    max-width: 370px;
+    margin: 20px auto;
+    text-align: center;
+  }
   
+  #searchInput {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+  }
+  
+  .search-bar-container .btn {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .search-bar-container .btn:hover {
+    background-color: #0056b3;
+  }

@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Log Collection</h1>
+
+  <div class="form-group">
+    <label for="logType">Select the logs you want:</label>
+    {{#dropdown-list as |selectedOption|}}
+<select id="logType" onchange={{action (mut this.selectedLogType) value="target.value"}}>
+          <option value="">Select Log Type</option>
+        <option value="Application">Application Logs</option>
+        {{!-- <option value="Security">Security Logs</option> --}}
+        <option value="System">System Logs</option>
+      </select>
+    {{/dropdown-list}}
+  </div>
+
+
+
+  <div class="form-group buttons-container">
+<button class="btn" {{on "click" this.fetchLogs}}>Sync</button>
+  </div>
+  
+</div>
