@@ -1,3 +1,5 @@
+<div class="parent-container">
+
 <div class="container">
   <h1>Log Collection</h1>
 
@@ -19,4 +21,81 @@
 <button class="btn" {{on "click" this.fetchLogs}}>Sync</button>
   </div>
   
+   <div class="search-bar">
+    <div class="form-group">
+      <select id="searchField"  onchange={{action (mut this.selectedFieldType) value="target.value"}}>
+        <option value="">Select Field Type</option>
+        <option value="sourcename">Source Name</option>
+        <option value="message">Message</option>
+        <option value="eventcode">Event Code</option>
+        <option value="timegenerated">Time Generated</option>
+        <option value="timewritten">Time Written</option>
+        <option value="recordnumber">Record Number</option>
+        <option value="category">Category</option>
+        <option value="computername">Computer Name</option>
+        <option value="eventidentifier">Event Identifier</option>
+        <option value="user">User</option>
+
+      </select>
+    </div>
+    <div class="form-group">
+      <input type="text" id="searchQuery" placeholder="What do you like to Search...">
+    </div>
+    <div class="form-group buttons-container">
+<button class="btn" {{on "click" this.searchLogs}}>Search</button>
+    </div>
+  </div>
+
+
+</div>
+<h1>List of Developers</h1>
+
+<ul>
+  {{#each this.developers as |developer|}}
+    <li>{{developer.name}}</li>
+    <li>{{developer.age}}</li>
+  {{/each}}
+</ul>
+<ul>
+  {{#if this.searchResults}}
+
+  {{#each this.searchResults as |result|}}
+    <li>{{result.eventcode}}</li>
+    <li>{{result.sourcename}}</li>
+        <li>{{result.timegenerated}}</li>
+    <li>{{result.recordnumber}}</li>
+    <li>{{result.eventidentifier}}</li>
+
+
+  {{/each}}
+  {{/if}}
+</ul>
+
+{{#if this.searchResults}}
+  <table>
+    <thead>
+      <tr>
+        <th>Event Code</th>
+        <th>Time Generated</th>
+        <th>Source Name</th>
+        <th>Record Number</th>
+        <th>Event Identifier</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each this.searchResults as |result|}} 
+        <tr>
+          <td>{{result.eventcode}}</td>
+          <td>{{result.timegenerated}}</td>
+          <td>{{result.sourcename}}</td>
+          <td>{{result.recordnumber}}</td>
+          <td>{{result.eventidentifier}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p>Wait for the Table to Load...</p>
+{{/if}}
+
 </div>

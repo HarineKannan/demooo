@@ -1,98 +1,116 @@
 /* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
 
-  .container {
-    max-width: 300px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    background-color: #f9f9f9;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  select {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  .checkbox-list {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  .checkbox-list li {
-    display: flex; 
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .checkbox-list input[type="checkbox"] {
-    margin-right: 10px; 
-  }
- 
-  .buttons-container {
-    text-align: center;
-  }
-  
-  .search{
-    margin: 30px;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .search-bar-container {
-    max-width: 370px;
-    margin: 20px auto;
-    text-align: center;
-  }
-  
-  #searchInput {
-    width: 70%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    box-sizing: border-box;
-  }
-  
-  .search-bar-container .btn {
-    padding: 8px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .search-bar-container .btn:hover {
-    background-color: #0056b3;
-  }
+.container {
+  max-width: 300px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.checkbox-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.checkbox-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.buttons-container {
+  text-align: center;
+}
+
+.search {
+  margin: 30px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.search-bar-container {
+  max-width: 370px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#searchInput {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table th,table td {
+  padding: 8px;
+  border: 1px solid #dddddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+\table tbody tr:hover {
+  background-color: #eaeaea;
+}
+
+table th:nth-child(1),
+table td:nth-child(1),
+table th:nth-child(4),
+table td:nth-child(4),
+table th:nth-child(5),
+table td:nth-child(5) {
+  text-align: center;
+}
