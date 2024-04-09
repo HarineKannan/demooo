@@ -48,47 +48,24 @@
 
 
 </div>
-<h1>List of Developers</h1>
-
-<ul>
-  {{#each this.developers as |developer|}}
-    <li>{{developer.name}}</li>
-    <li>{{developer.age}}</li>
-  {{/each}}
-</ul>
-<ul>
-  {{#if this.searchResults}}
-
-  {{#each this.searchResults as |result|}}
-    <li>{{result.eventcode}}</li>
-    <li>{{result.sourcename}}</li>
-        <li>{{result.timegenerated}}</li>
-    <li>{{result.recordnumber}}</li>
-    <li>{{result.eventidentifier}}</li>
-
-
-  {{/each}}
-  {{/if}}
-</ul>
-
 {{#if this.searchResults}}
   <table>
     <thead>
       <tr>
-        <th>Event Code</th>
+        <th>Record Number</th>
         <th>Time Generated</th>
         <th>Source Name</th>
-        <th>Record Number</th>
+        <th>Event Code</th>
         <th>Event Identifier</th>
       </tr>
     </thead>
     <tbody>
       {{#each this.searchResults as |result|}} 
         <tr>
-          <td>{{result.eventcode}}</td>
+          <td>{{result.recordnumber}}</td>
           <td>{{result.timegenerated}}</td>
           <td>{{result.sourcename}}</td>
-          <td>{{result.recordnumber}}</td>
+          <td>{{result.eventcode}}</td>
           <td>{{result.eventidentifier}}</td>
         </tr>
       {{/each}}

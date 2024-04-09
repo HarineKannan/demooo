@@ -58,7 +58,7 @@ setSelectedFieldType(fieldType) {
         const data = await response.json();
         console.log('Received data:', data.searchResults);
         this.searchResults = data.searchResults;
-        // this.set('searchResults', data.searchResults);
+        this.set('searchResults', data);
         this.set('searchResults', data.searchResults);
         console.log(this.developers);
 
